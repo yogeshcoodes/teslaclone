@@ -8,5 +8,171 @@
 body {
   background: #fff;
   color: #000;
-  overflow-x: hidden;
+}
+
+/* ===== HEADER ===== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 56px;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+/* ===== LOGO ===== */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+/* ===== CENTER MENU ===== */
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu a {
+  font-family: "Google Sans", sans-serif;
+  text-decoration: none;
+  color: #171a20;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #000000c3;
+  transition: background 0.2s ease;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  background: #f4f4f4;
+}
+
+/* ===== RIGHT ACTION ICONS ===== */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.actions a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 18%;
+  color: #171a20;
+  transition: background 0.2s ease;
+}
+
+.actions a:hover {
+  background: #f4f4f4;
+}
+
+.actions svg {
+  width: 24px;
+  height: 24px;
+}
+
+.menu-toggle {
+  font-family: "Google Sans", sans-serif;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: rgba(0, 0, 0, 0.494);
+  background-color: #00000010;
+  transition: background 0.2s ease;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+  /* background: rgba(255, 255, 255, 0.35); */
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+}
+
+.menu-toggle:hover {
+  background-color: #00000014;
+}
+
+/* ===============================
+   TABLET & SMALL LAPTOP
+   =============================== */
+@media (max-width: 1200px) {
+  .menu {
+    display: none;
+  }
+
+  .actions {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+/* ===============================
+   MOBILE
+   =============================== */
+@media (max-width: 768px) {
+  header {
+    background: transparent; /* header transparent */
+    backdrop-filter: blur(10px); /* Tesla feel */
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .actions {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+.fixed-box {
+  position: fixed;
+  bottom: 0%;
+  z-index: 999;
+  height: 56px;
+  width: 100%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 24px;
+  /* border: 1px solid black; */
+}
+
+.fixed-box-content {
+  /* border: 2px solid black; */
+  height: 100%;
+  width: 100%;
+  padding: 1px 180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  text-align: center;
+}
+
+.querry-box {
+  outline: 24px solid red;
+  height: 100%;
+}
+
+.book-drive {
+  outline: 2px solid blue;
+  height: 100%;
 }
