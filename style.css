@@ -1,9 +1,14 @@
+/* ===============================
+   1. GLOBAL RESET & BASE
+   =============================== */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Google Sans", sans-serif;
   overflow: hidden;
+  /* border: 0.5px solid blue; */
 }
 
 body {
@@ -11,7 +16,11 @@ body {
   color: #000;
 }
 
-/* ===== HEADER ===== */
+
+/* ===============================
+   2. HEADER WRAPPER
+   =============================== */
+
 header {
   position: sticky;
   top: 0;
@@ -25,20 +34,31 @@ header {
   padding: 0 40px;
 }
 
-/* ===== LOGO ===== */
+
+/* ===============================
+   3. LOGO SECTION
+   =============================== */
+
 .logo {
   display: flex;
   align-items: center;
 }
 
-/* ===== CENTER MENU ===== */
+.logo svg {
+  color: #000000d7;
+}
+
+
+/* ===============================
+   4. CENTER NAV MENU
+   =============================== */
+
 .menu {
   display: flex;
   align-items: center;
 }
 
 .menu a {
-  font-family: "Google Sans", sans-serif;
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
@@ -49,10 +69,14 @@ header {
 }
 
 .menu a:hover {
-  background: #f4f4f4;
+  background-color: #00000018;
 }
 
-/* ===== RIGHT ACTION ICONS ===== */
+
+/* ===============================
+   5. HEADER ACTION ICONS
+   =============================== */
+
 .actions {
   display: flex;
   align-items: center;
@@ -70,17 +94,21 @@ header {
 }
 
 .actions a:hover {
-  background: #f4f4f4;
+  background-color: #00000018;
 }
 
 .actions svg {
   width: 24px;
   height: 24px;
+  color: #000000d7;
 }
 
-/* ===== MENU TOGGLE ===== */
+
+/* ===============================
+   6. MOBILE MENU BUTTON
+   =============================== */
+
 .menu-toggle {
-  font-family: "Google Sans", sans-serif;
   font-size: 14px;
   font-weight: 600;
   padding: 8px 12px;
@@ -97,7 +125,11 @@ header {
   background: #00000014;
 }
 
-/* ===== RESPONSIVE (TABLET + MOBILE) ===== */
+
+/* ===============================
+   7. HEADER RESPONSIVE
+   =============================== */
+
 @media (max-width: 1200px) {
   .menu,
   .actions {
@@ -109,14 +141,19 @@ header {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   header {
     background: transparent;
     backdrop-filter: blur(10px);
+    padding: 0 20px;
   }
 }
 
-/* ===== FIXED BOTTOM BAR ===== */
+
+/* ===============================
+   8. FIXED BOTTOM BAR
+   =============================== */
+
 .fixed-box {
   position: fixed;
   bottom: 0;
@@ -128,24 +165,29 @@ header {
   z-index: 999;
   display: flex;
   align-items: center;
+  padding: 10px 200px;
 }
 
 .fixed-inner {
   max-width: 1280px;
   width: 100%;
+  height: 100%;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 18px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   gap: 16px;
 }
 
-/* ===== SEARCH BOX ===== */
+
+/* ===============================
+   9. QUERY / SEARCH BOX
+   =============================== */
+
 .query-box {
-  flex: 1;
-  height: 40px;
-  padding: 0 14px;
+  height: 100%;
+  width: auto;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -155,9 +197,67 @@ header {
   color: #5c5e62;
 }
 
-/* ===== BUTTON ===== */
+
+/* ===============================
+   10. INPUT FIELD
+   =============================== */
+
+.placeholder {
+  flex: 1;
+  width: 13rem;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  color: #171a20;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.placeholder::placeholder {
+  color: #5c5e62;
+  opacity: 1;
+  text-align: left;
+}
+
+.placeholder:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+
+/* ===============================
+   11. ICONS (LEFT & SEND)
+   =============================== */
+
+.icon,
+.send {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 4.4rem;
+}
+
+.send svg {
+  border-radius: 4px;
+  background-color: #00000028;
+  color: white;
+}
+
+.send svg:hover {
+  background-color: #00000033;
+}
+
+
+/* ===============================
+   12. BOOK DRIVE BUTTON
+   =============================== */
+
 .book-drive {
-  height: 40px;
+  height: 100%;
   padding: 0 18px;
   display: flex;
   align-items: center;
@@ -165,7 +265,34 @@ header {
   border: 1px solid #d0d0d0;
   border-radius: 6px;
   font-size: 14px;
-  font-weight: 500;
-  color: #171a20;
+  font-weight: bold;
+  color: #000000c9;
   white-space: nowrap;
+  cursor: pointer;
+}
+
+.wheel-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+  margin-right: 10px;
+}
+
+.wheel-icon img {
+  height: 100%;
+  width: 100%;
+}
+
+
+/* ===============================
+   13. TEXT LABELS
+   =============================== */
+
+.text {
+  font-weight: bold;
+  color: #000000c9;
+  display: flex;
+  align-items: baseline;
+  text-align: left;
 }
