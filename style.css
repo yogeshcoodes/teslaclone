@@ -8,14 +8,32 @@
   box-sizing: border-box;
   font-family: "Google Sans", sans-serif;
   overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
   /* border: 0.5px solid blue; */
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a:focus,
+a:visited,
+a:active {
+  outline: none;
 }
 
 body {
   background: #fff;
   color: #000;
 }
-
 
 /* ===============================
    2. HEADER WRAPPER
@@ -34,7 +52,6 @@ header {
   padding: 0 40px;
 }
 
-
 /* ===============================
    3. LOGO SECTION
    =============================== */
@@ -47,7 +64,6 @@ header {
 .logo svg {
   color: #000000d7;
 }
-
 
 /* ===============================
    4. CENTER NAV MENU
@@ -71,7 +87,6 @@ header {
 .menu a:hover {
   background-color: #00000018;
 }
-
 
 /* ===============================
    5. HEADER ACTION ICONS
@@ -103,7 +118,6 @@ header {
   color: #000000d7;
 }
 
-
 /* ===============================
    6. MOBILE MENU BUTTON
    =============================== */
@@ -124,7 +138,6 @@ header {
 .menu-toggle:hover {
   background: #00000014;
 }
-
 
 /* ===============================
    7. HEADER RESPONSIVE
@@ -148,7 +161,6 @@ header {
     padding: 0 20px;
   }
 }
-
 
 /* ===============================
    8. FIXED BOTTOM BAR
@@ -180,7 +192,6 @@ header {
   gap: 16px;
 }
 
-
 /* ===============================
    9. QUERY / SEARCH BOX
    =============================== */
@@ -196,7 +207,6 @@ header {
   font-size: 14px;
   color: #5c5e62;
 }
-
 
 /* ===============================
    10. INPUT FIELD
@@ -227,7 +237,6 @@ header {
   box-shadow: none;
 }
 
-
 /* ===============================
    11. ICONS (LEFT & SEND)
    =============================== */
@@ -250,7 +259,6 @@ header {
 .send svg:hover {
   background-color: #00000033;
 }
-
 
 /* ===============================
    12. BOOK DRIVE BUTTON
@@ -283,7 +291,6 @@ header {
   height: 100%;
   width: 100%;
 }
-
 
 /* ===============================
    13. TEXT LABELS
