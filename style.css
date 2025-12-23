@@ -302,4 +302,6 @@ header {
   display: flex;
   align-items: baseline;
   text-align: left;
+  white-space: nowrap;
 }
+

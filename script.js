@@ -1,0 +1,22 @@
+const questions = [
+  "What does the Tesla app do?",
+  "Where can I drive the Model 3?",
+  "Compare Model 3 with Model Y",
+  "What's Dog Mode?"
+];
+
+let current = 0;
+const input = document.querySelector('.placeholder');
+
+function changeQuestion() {
+  input.style.opacity = '0';
+  
+  setTimeout(() => {
+    current = (current + 1) % questions.length;
+    input.placeholder = `"${questions[current]}"`;
+    input.style.opacity = '1';
+  }, 300);
+}
+
+input.style.transition = 'opacity 0.6s ease-in-out';
+setInterval(changeQuestion, 3000);
